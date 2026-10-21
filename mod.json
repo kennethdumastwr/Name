@@ -1,0 +1,80 @@
+{
+  "geode": "5.10.1",
+  "gd": {
+    "android": "2.2081",
+    "win": "2.2081",
+    "mac": "2.2081",
+    "ios": "2.2081"
+  },
+  "id": "theryno.fpsboost",
+  "name": "FPS Boost",
+  "version": "v1.0.0",
+  "developer": "Theryno",
+  "description": "Performance optimizer. Unlocks the frame rate and lets you turn off GPU-heavy visual effects (particles, trails, background) to boost FPS.",
+  "tags": [
+    "performance",
+    "utility"
+  ],
+  "settings": {
+    "general-section": {
+      "name": "General",
+      "type": "title"
+    },
+    "enabled": {
+      "name": "Enable FPS Boost",
+      "description": "Master switch. When OFF, every option below is ignored and the game returns to normal.",
+      "type": "bool",
+      "default": true
+    },
+    "settings-button": {
+      "name": "Show settings button",
+      "description": "Adds an FPS Boost button to the pause menu that opens this settings menu.",
+      "type": "bool",
+      "default": true
+    },
+    "fps-section": {
+      "name": "Frame Rate",
+      "type": "title"
+    },
+    "unlock-fps": {
+      "name": "Unlock FPS",
+      "description": "Raises the game's frame-rate target so it can go above 60 FPS. You only see a gain if your screen's refresh rate is higher than 60 Hz (90 / 120 / 144 Hz phones). Turn off to restore the game's normal limit.",
+      "type": "bool",
+      "default": true
+    },
+    "target-fps": {
+      "name": "Target FPS",
+      "description": "The frame rate to aim for. Match your screen's refresh rate (for example 90 or 120). Setting it higher than your screen can show gives no benefit and only wastes battery.",
+      "type": "int",
+      "default": 120,
+      "min": 30,
+      "max": 360,
+      "control": {
+        "input": true,
+        "slider": true
+      }
+    },
+    "gpu-section": {
+      "name": "Reduce GPU Load (in levels)",
+      "type": "title"
+    },
+    "no-particles": {
+      "name": "Disable particles",
+      "description": "Stops drawing particle effects inside levels (orb and pad bursts, vehicle and ground dust, etc). One of the biggest GPU savers in busy levels.",
+      "type": "bool",
+      "default": false
+    },
+    "no-trails": {
+      "name": "Hide motion trails",
+      "description": "Stops drawing the streak trails behind the player and other objects. Cheaper to draw, but the game looks plainer.",
+      "type": "bool",
+      "default": false
+    },
+    "no-background": {
+      "name": "Hide background",
+      "description": "Hides the level's background layer, which removes a full-screen draw every frame. The background turns black. Applies when a level starts.",
+      "type": "bool",
+      "default": false
+    }
+  }
+}
